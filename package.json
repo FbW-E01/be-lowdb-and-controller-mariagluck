@@ -1,11 +1,28 @@
 {
-  "name": "BE-users-and-posts",
+  "name": "be-users-and-posts",
   "version": "1.0.0",
   "main": "index.js",
   "type": "module",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "lowdb": "^2.1.0"
-  }
+    "i": "^0.3.6",
+    "install": "^0.13.0",
+    "lowdb": "^2.1.0",
+    "npm": "^7.22.0"
+  },
+  "description": "- I want *you* to continue building our API - Our API already knows how to deal with Posts pretty well - Make it so that it knows how to deal with Users properly - Users should be saved (similar to posts) using `LowDB`",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FbW-E01/be-lowdb-and-controller-mariagluck.git"
+  },
+  "keywords": [],
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/FbW-E01/be-lowdb-and-controller-mariagluck/issues"
+  },
+  "homepage": "https://github.com/FbW-E01/be-lowdb-and-controller-mariagluck#readme"
 }

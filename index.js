@@ -1,7 +1,7 @@
 import express from 'express';
 import { requestlogger } from './middlewares/requestlogger.js';
 import { globalErrorHandler } from './middlewares/globalErrorHandler.js';
-import { wildcardEndpoint } from './controllers/errorController';
+import { wildcardEndpoint } from './controllers/errorController.js';
 import userRouter from './routes/userRouter.js';
 import postsRouter from './routes/postsRouter.js';
 

@@ -1,4 +1,5 @@
 import express from 'express';
+import { usersGet, usersPost, usersPut, usersDelete } from '../controllers/usersController.js';
 
 const userRouter = express.Router();
 
@@ -8,8 +9,11 @@ userRouter.use((req,res,next) => {
     next();
 });
 
-userRouter.get("/", (req, res) => { res.send("Users root path"); });
-userRouter.post("/", (req, res) => { res.send("Users root path POST") });
+userRouter.get("/", usersGet);
+userRouter.post("/", usersPost);
+userRouter.put("/:id", usersPut);
+userRouter.delete("/:id", usersDelete);
+
 userRouter.get("/about", (req, res) => { res.send("Users About path") });
 userRouter.get("/details", (req, res, next) => {
     // Local error handler

@@ -30,9 +30,33 @@ GET http://localhost:3012/users/
 
 ###
 
+
 POST http://localhost:3012/users/
+Content-Type: application/json
+
+{
+    "content": "User",
+    "name": "Pepa"
+}
 
 ### 
+
+
+PUT http://localhost:3012/users/5536096354852
+Content-Type: application/json
+
+{
+    "content": "super User",
+    "name": "Abba",
+    "updated": true
+}
+
+###
+
+
+DELETE http://localhost:3012/users/5536096354852
+
+###
 
 GET http://localhost:3012/users/about
 

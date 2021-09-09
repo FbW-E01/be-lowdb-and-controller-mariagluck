@@ -6,7 +6,7 @@ const db = new Low(adapter);
 console.log("Reading in old data from database");
 await db.read();
 
-db.data = db.data || { posts: [] };
+db.data = db.data || { posts: [], users: [] };
 
 export function writeData(data) {
     db.data = data;
@@ -23,6 +23,19 @@ export function updatePost(id, newData) {
 
     const data = getData();
     data.posts = data.posts.map(p => {
+        if (p.id === id) {
+            p = updatedData;
+        }
+        return p;
+    });
+    writeData(data);
+}
+
+export function updateUser(id, updatedData) {
+    updatedData.id = id;
+
+    const data = getData();
+    data.users = data.users.map(p => {
         if (p.id === id) {
             p = updatedData;
         }
